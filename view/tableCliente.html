@@ -1,27 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cliente</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $("#hide").click(function () {
+            $("input.complResidCliente").hide();
+        });
+
+        $("#show").click(function () {
+            $("p").show();
+        });
+    </script>
+    <title>Cliente</title>
 </head>
 
 <body>
-    <label id="nomeCliente">inserir o nome</label> <br><br>
-    <input type="text" name="nomeCliente" id="nomeCliente"> <br><br>
-    <label id="cpfCliente">inserir CPF</label> <br><br>
-    <input type="number" name="cpfCliente" id="cpfCliente"><br><br>
-    <label id="telCliente"> inserir telefone</label><br><br>
-    <input type="number" name="telCliente" id="telCliente"><br><br>
-    <label id="emailCliente"> inserir Email</label><br><br>
-    <input type="email" name="emailCliente" id="emailCliente"><br><br>
-    <label id="numResidCliente"> inserir numero da residência</label><br><br>
-    <input type="number" name="numResidCliente" id="numResidCliente"><br><br>
-    <label id="obsResidCliente"> inserir obs da residência</label><br><br>
-    <input type="text" name="obsResidCliente" id="obsResidCliente"><br><br>
-
+    <div id="container">
+        <form action="tableProduto.php" method="post">
+            <label id="nomeCliente">Informe o nome:</label>
+            <input type="text" name="nomeCliente" id="nomeCliente" maxlength="100"> <br>
+            <label id="cpfCliente">Informe o CPF:</label>
+            <input type="number" name="cpfCliente" id="cpfCliente"><br>
+            <label id="telCliente"> Informe o telefone:</label>
+            <input type="number" name="telCliente" id="telCliente"><br>
+            <label id="emailCliente"> Informe o e-mail:</label>
+            <input type="email" name="emailCliente" id="emailCliente" maxlength="70"><br>
+            <label id="numResidCliente"> Informe o número da residência:</label>
+            <input type="number" name="numResidCliente" id="numResidCliente" maxlength="10"><br>
+            <a>Deseja informar complemento?</a><br><br>
+            <label id="mostrarRadio">
+                <input type="radio" name="complemento" value="sim" id="csim" class="radio-button">Sim
+                <input type="radio" name="complemento" value="nao" id="cnao" class="radio-button">Não
+            </label>
+            <label id="complResidCliente"> Informe o complemento da residência:</label>
+            <input type="number" name="complResidCliente" id="complResidCliente" maxlength="70"><br>
+            <label id="obsResidCliente"> Informe a observação da residência:</label>
+            <input type="text" name="obsResidCliente" id="obsResidCliente" maxlength="70"><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
 </body>
 
 </html>

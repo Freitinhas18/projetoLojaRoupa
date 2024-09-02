@@ -57,3 +57,13 @@ body {
     margin-top: 20px;
     color: #2ecc71;
   }
+  .radio-button {
+    margin-top: 20px;
+  }
+
+  #mostrarRadio {
+    display: flex;
+    align-items: center;
+    margin-left: 90px;
+    margin-right: 90px;
+  }
