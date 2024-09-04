@@ -26,7 +26,7 @@ create table estoque(
 
 create table tamanho(
 	idTamanho int auto_increment not null primary key,
-    nomeTamanho varchar(10) not null
+    sigla varchar(10) not null
 );
 
 create table cliente(
@@ -92,3 +92,38 @@ foreign key(nfVenda) references venda(nfVenda);
 alter table vItem add idEstoque int not null unique;
 alter table vItem add constraint fkprodutovItem
 foreign key(idEstoque) references estoque(idEstoque);
+
+-- ESTRUTURA CRUD
+-- C - CRIAR/INSERIR DADOS NA TABELA
+insert into tamanho (sigla)
+values ('P'),
+	   ('PP'),
+       ('M'),
+       ('G');
+insert into tamanho (sigla)
+values (40);
+
+-- R - READ/SELECT - CONSULTA DADOS - GERAR RELATÓRIO
+select sigla from tamanho;
+
+-- CONSULTAR UM UNICO REGISTRO - A CLAUSULA DE CONDIÇÃO WHERE
+select idTamanho, sigla from tamanho where sigla = ('PP');
+
+-- CONSULTAR EM ORDEM ALFABETICA 
+select idTamanho, sigla from tamanho order by sigla;
+-- CONSULTAR SOMENTE SOMENTE AS LINHA M E G EM ORDEM ALFABETICA
+select idTamanho, sigla from tamanho 
+where sigla = "M" or sigla = "G" order by sigla;
+
+select idTamanho, sigla from tamanho 
+where sigla in ("M","G") order by sigla;
+
+-- U - UPDATE - ATUALIZAR/EDITAR
+update tamanho set sigla = 40 where idTamanho = 1;
+
+-- D - DELETE - apagar dados ou seja excluir um registro
+
+delete from tamanho where idTamanho = 5;
+
+
+drop database dbLojaRoupa;
