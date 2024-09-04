@@ -118,6 +118,9 @@ where sigla = "M" or sigla = "G" order by sigla;
 select idTamanho, sigla from tamanho 
 where sigla in ("M","G") order by sigla;
 
+select idTamanho from tamanho 
+where idTamanho between 1 and 3;
+
 -- U - UPDATE - ATUALIZAR/EDITAR
 update tamanho set sigla = 40 where idTamanho = 1;
 
