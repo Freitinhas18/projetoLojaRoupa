@@ -8,36 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function () {
-            $("input[name='complemento']").change(function () {
-                if ($("#csim").is(":checked")) {
-                    $("label[for='complResidCliente']").show();
-                    $("input[name='complResidCliente']").show();
-                    $("label[for='obsResidCliente']").show();
-                    $("input[name='obsResidCliente']").show();
-                } else {
-                    $("label[for='complResidCliente']").hide();
-                    $("input[name='complResidCliente']").hide();
-                    $("label[for='obsResidCliente']").hide();
-                    $("input[name='obsResidCliente']").hide();
-                }
-            });
-
-            // Initial state based on default selection
-            if ($("#csim").is(":checked")) {
-                $("label[for='complResidCliente']").show();
-                $("input[name='complResidCliente']").show();
-                $("label[for='obsResidCliente']").show();
-                $("input[name='obsResidCliente']").show();
-            } else {
-                $("label[for='complResidCliente']").hide();
-                $("input[name='complResidCliente']").hide();
-                $("label[for='obsResidCliente']").hide();
-                $("input[name='obsResidCliente']").hide();
-            }
-        });
-    </script>
+    <script src="jquery.js"></script>
     <title>Cliente</title>
 </head>
 
