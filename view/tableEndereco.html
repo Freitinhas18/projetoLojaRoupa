@@ -1,42 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Endereço</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Consulta CEP</title>
+  </head>
+  <body>
     <div id="container">
-      <form method="post" action="#">
-        <h1>Endereço</h1>
-        <label id="cepEndereco">Cep:</label>
-            <input type="number" id="cepEndereco" name="cepEndereco">
-        <br>
+      <h1>Endereço</h1>
+      <form>
+        <label for="cep">CEP</label>
+        <input type="text" maxlength="9" id="cep" />
+        <br />
 
-        <label id="tipoEndereco">Logradouro:</label>
-            <input type="text" id="tipoEndereco" name="tipoEndereco" maxlength="20">
-        <br>
+        <label for="logradouro">Logradouro</label>
+        <input type="text" id="logradouro" />
+        <br />
 
-        <label id="ruaEndereco">Rua:</label>
-            <input type="text" id="ruaEndereco" name="ruaEndereco" maxlength="35">
-        <br>
+        <label for="bairro">Bairro</label>
+        <input type="text" id="bairro" />
+        <br />
 
-        <label id="cidadeEndereco">Cidade:</label>
-            <input type="text" id="cidadeEndereco" name="cidadeEndereco" maxlength="29">
-        <br>
+        <label for="localidade">Localidade</label>
+        <input type="text" id="localidade" />
+        <br />
 
-        <label id="bairroEndereco">Bairro:</label>
-            <input type="text" id="bairroEndereco" name="bairroEndereco" maxlength="35">
-        <br>
-
-        <label id="utfEndereco">Estado:</label>
-            <input type="text" id="utfEndereco" name="utfEndereco" maxlength="20">
-        <br>
+        <label for="uf">UF</label>
+        <input type="text" id="uf" />
+        <br />
 
         <button type="submit">Enviar</button>
-        </form>  
+      </form>
     </div>
-</body>
+    <script src="../src/js/main.js"></script>
+  </body>
 </html>
