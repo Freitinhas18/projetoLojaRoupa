@@ -31,6 +31,7 @@
             $insere->bindValue(":numResidCliente",$numResidClienteC);
             $insere->bindValue(":complResidCliente",$complResidClienteC);
             $insere->bindValue(":obsResidCliente",$obsResidClienteC);
+            $insere->execute();
         }
 
         public function insereEndereco($cepEndC, $ruaEndC, $numeroEndC, $bairroEndC, $cidadeEndC, $ufEndC) {
@@ -42,6 +43,7 @@
             $insere->bindValue(":bairroEnd",$bairroEndC);
             $insere->bindValue(":cidadeEnd",$cidadeEndC);
             $insere->bindValue(":ufEnd",$ufEndC);
+            $insere->execute();
         }
 
         public function insereEstoque($loteEstqC, $dataEstqC, $quantidadeEstqC, $precoCustoC, $precoVendaC) {
@@ -52,6 +54,7 @@
             $insere->bindValue(":qtdEstq",$quantidadeEstqC);
             $insere->bindValue(":precoCustoEstq",$precoCustoC);
             $insere->bindValue(":precoVendaEstq",$precoVendaC);
+            $insere->execute();
         }
     }
 
