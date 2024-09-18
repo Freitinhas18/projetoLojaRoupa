@@ -97,6 +97,7 @@ foreign key(idEstoque) references estoque(idEstoque);
 select * from cliente;
 select * from endereco;
 select * from tamanho;
+select * from produto;
 
 -- ESTRUTURA CRUD
 -- C - CRIAR/INSERIR DADOS NA TABELA
