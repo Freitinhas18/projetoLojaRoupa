@@ -38,8 +38,8 @@
             $insere = $this->pdo->prepare("insert into endereco(cepEndereco, numeroEndereco, tipoEndereco, ruaEndereco, cidadeEndereco, bairroEndereco, ufEndereco)
             values (:cepEnd, :numeroEnd, :tipoEnd, :ruaEnd, :cidadeEnd, :bairroEnd, :ufEnd)");
             $insere->bindValue(":cepEnd",$cepEndC);
-            $insere->bindValue(":numeroEnd",$numeroEndC);
             $insere->bindValue(":ruaEnd",$ruaEndC);
+            $insere->bindValue(":numeroEnd",$numeroEndC);
             $insere->bindValue(":bairroEnd",$bairroEndC);
             $insere->bindValue(":cidadeEnd",$cidadeEndC);
             $insere->bindValue(":ufEnd",$ufEndC);
