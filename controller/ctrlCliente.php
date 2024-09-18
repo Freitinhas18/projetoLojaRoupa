@@ -10,4 +10,7 @@
 
     $clienteC = new conexao();
     $clienteC->insereCliente($nomeClienteC, $cpfClienteC, $telClienteC, $emailClienteC, $numResidClienteC);
+
+    echo"<br><br>";
+    echo"<div> class='tableCliente'<h2>ENDEREÇO CADASTRADO</h2>.";
 ?>

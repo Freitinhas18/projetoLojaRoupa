@@ -9,28 +9,28 @@
   <body>
     <div id="container">
       <h1>Endereço</h1>
-      <form>
-        <label for="cep">CEP</label>
-        <input type="text" maxlength="9" name="cepEnd" id="cep" />
-        <br />
+      <form action="../controller/ctrlCliente.php" method="post">
+        <label for="cepEnd">CEP</label>
+        <input type="text" maxlength="9" name="cepEnd" id="cep"/>
+        <br/>
 
-        <label for="logradouro">Rua</label>
+        <label for="ruaEnd">Rua</label>
         <input type="text" name="ruaEnd" id="rua" />
-        <br />
+        <br/>
 
-        <label for="numero">Número da casa</label>
+        <label for="numeroEnd">Número da casa</label>
         <input type="number" name="numeroEnd" id="numero" />
         <br />
 
-        <label for="bairro">Bairro</label>
+        <label for="bairroEnd">Bairro</label>
         <input type="text" name="bairroEnd" id="bairro" />
         <br />
 
-        <label for="localidade">Cidade</label>
+        <label for="cidadeEnd">Cidade</label>
         <input type="text" name="cidadeEnd" id="cidade " />
         <br />
 
-        <label for="uf">UF</label>
+        <label for="ufEnd">UF</label>
         <input type="text" name="ufEnd" id="uf" />
         <br />
 

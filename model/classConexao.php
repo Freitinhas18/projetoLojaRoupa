@@ -21,9 +21,12 @@
                 exit();
             }
         }
-        public function insereCliente($cepEndC, $ruaEndC, $numeroEndC, $bairroEndC, $cidadeEndC, $ufEndC): void{
+        public function insereCliente(): void{}
 
+        public function insereEndereco($cepEndC, $ruaEndC, $numeroEndC, $bairroEndC, $cidadeEndC, $ufEndC) {
+            $insere = $this->pdo->prepare("insert into endereco(cepEndereco, numeroEndereco, tipoEndereco, ruaEndereco, cidadeEndereco, bairroEndereco, ufEndereco)");
         }
+        
     }
 
 ?>
