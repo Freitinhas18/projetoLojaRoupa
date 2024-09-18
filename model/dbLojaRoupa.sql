@@ -34,7 +34,7 @@ create table cliente(
 	nomeCliente varchar(100) not null,
     cpfCliente char(11) not null unique,
     telCliente char(11) not null unique,
-    emailCliente varchar(70) not null unique,
+    emailCliente varchar(70) not null unique
 );
 
 create table endereco(
