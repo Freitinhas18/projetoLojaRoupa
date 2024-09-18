@@ -21,7 +21,17 @@
                 exit();
             }
         }
-        public function insereCliente(): void{}
+        public function insereCliente($nomeClienteC, $cpfClienteC, $telClienteC, $emailClienteC, $numResidClienteC, $complResidClienteC, $obsResidClienteC){
+            $insere = $this->pdo->prepare("insert into cliente(nomeCliente, cpfCliente, telCliente, emailCliente, numResidCliente, complResidCliente, obsResidCliente)
+            values (:nomeCliente, :cpfCliente, :telCliente, :emailCliente, :numResidCliente, :complResidCliente, :obsResidCliente)");
+            $insere->bindValue(":nomeCliente",$nomeClienteC);
+            $insere->bindValue(":cpfCliente",$cpfClienteC);
+            $insere->bindValue(":telCliente",$telClienteC);
+            $insere->bindValue(":emailCliente",$emailClienteC);
+            $insere->bindValue(":numResidCliente",$numResidClienteC);
+            $insere->bindValue(":complResidCliente",$complResidClienteC);
+            $insere->bindValue(":obsResidCliente",$obsResidClienteC);
+        }
 
         public function insereEndereco($cepEndC, $ruaEndC, $numeroEndC, $bairroEndC, $cidadeEndC, $ufEndC) {
             $insere = $this->pdo->prepare("insert into endereco(cepEndereco, numeroEndereco, tipoEndereco, ruaEndereco, cidadeEndereco, bairroEndereco, ufEndereco)
@@ -34,17 +44,15 @@
             $insere->bindValue(":ufEnd",$ufEndC);
         }
 
-        public function insereEstoque($cepEndC, $ruaEndC, $numeroEndC, $bairroEndC, $cidadeEndC, $ufEndC) {
-            $insere = $this->pdo->prepare("insert into endereco(cepEndereco, numeroEndereco, tipoEndereco, ruaEndereco, cidadeEndereco, bairroEndereco, ufEndereco)
-            values (:cepEnd, :numeroEnd, :tipoEnd, :ruaEnd, :cidadeEnd, :bairroEnd, :ufEnd)");
-            $insere->bindValue(":cepEnd",$cepEndC);
-            $insere->bindValue(":numeroEnd",$numeroEndC);
-            $insere->bindValue(":ruaEnd",$ruaEndC);
-            $insere->bindValue(":bairroEnd",$bairroEndC);
-            $insere->bindValue(":cidadeEnd",$cidadeEndC);
-            $insere->bindValue(":ufEnd",$ufEndC);
+        public function insereEstoque($loteEstqC, $dataEstqC, $quantidadeEstqC, $precoCustoC, $precoVendaC) {
+            $insere = $this->pdo->prepare("insert into estoque(loteEstoque, dataEstoque, qtdEstoque, precoCusto, precoVenda)
+            values (:loteEstq, :dataEstq, :qtdEstq, :precoCustoEstq, :precoVendaEstq)");
+            $insere->bindValue(":loteEstq",$loteEstqC);
+            $insere->bindValue(":dataEstq",$dataEstqC);
+            $insere->bindValue(":qtdEstq",$quantidadeEstqC);
+            $insere->bindValue(":precoCustoEstq",$precoCustoC);
+            $insere->bindValue(":precoVendaEstq",$precoVendaC);
         }
-        
     }
 
 ?>

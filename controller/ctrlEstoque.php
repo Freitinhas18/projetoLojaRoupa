@@ -9,7 +9,7 @@
     $precoVendaC = addslashes($_POST['precoVenda']);
 
     $estoqueC = new conexao();
-    $estoqueC->inserecEstoqueC($loteEstqC, $dataEstqC, $quantidadeEstqC, $precoCustoC, $precoVendaC);
+    $estoqueC->insereEstoque($loteEstqC, $dataEstqC, $quantidadeEstqC, $precoCustoC, $precoVendaC);
 
     echo"<br><br>";
     echo"<div> class='tableEstoque'<h2>ENDEREÇO CADASTRADO</h2>.";

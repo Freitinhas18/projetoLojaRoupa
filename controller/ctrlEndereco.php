@@ -10,7 +10,7 @@
     $ufEndC = addslashes($_POST['ufEnd']);
 
     $enderecoC = new conexao();
-    $enderecoC->inserecEnderecoC($cepEndC, $ruaEndC, $numeroEndC, $bairroEndC, $cidadeEndC, $ufEndC);
+    $enderecoC->insereEndereco($cepEndC, $ruaEndC, $numeroEndC, $bairroEndC, $cidadeEndC, $ufEndC);
 
     echo"<br><br>";
     echo"<div> class='tableEndereco'<h2>ENDEREÇO CADASTRADO</h2>.";
