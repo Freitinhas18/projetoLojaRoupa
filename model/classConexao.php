@@ -22,8 +22,8 @@
             }
         }
         public function insereCliente($nomeClienteC, $cpfClienteC, $telClienteC, $emailClienteC){
-            $insere = $this->pdo->prepare("insert into cliente(nomeCliente, cpfCliente, telCliente, emailCliente, numResidCliente, complResidCliente, obsResidCliente)
-            values (:nomeCliente, :cpfCliente, :telCliente, :emailCliente, :numResidCliente, :complResidCliente, :obsResidCliente)");
+            $insere = $this->pdo->prepare("insert into cliente(nomeCliente, cpfCliente, telCliente, emailCliente, numResidCliente)
+            values (:nomeCliente, :cpfCliente, :telCliente, :emailCliente, :numResidCliente)");
             $insere->bindValue(":nomeCliente",$nomeClienteC);
             $insere->bindValue(":cpfCliente",$cpfClienteC);
             $insere->bindValue(":telCliente",$telClienteC);
