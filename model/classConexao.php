@@ -24,7 +24,25 @@
         public function insereCliente(): void{}
 
         public function insereEndereco($cepEndC, $ruaEndC, $numeroEndC, $bairroEndC, $cidadeEndC, $ufEndC) {
-            $insere = $this->pdo->prepare("insert into endereco(cepEndereco, numeroEndereco, tipoEndereco, ruaEndereco, cidadeEndereco, bairroEndereco, ufEndereco)");
+            $insere = $this->pdo->prepare("insert into endereco(cepEndereco, numeroEndereco, tipoEndereco, ruaEndereco, cidadeEndereco, bairroEndereco, ufEndereco)
+            values (:cepEnd, :numeroEnd, :tipoEnd, :ruaEnd, :cidadeEnd, :bairroEnd, :ufEnd)");
+            $insere->bindValue(":cepEnd",$cepEndC);
+            $insere->bindValue(":numeroEnd",$numeroEndC);
+            $insere->bindValue(":ruaEnd",$ruaEndC);
+            $insere->bindValue(":bairroEnd",$bairroEndC);
+            $insere->bindValue(":cidadeEnd",$cidadeEndC);
+            $insere->bindValue(":ufEnd",$ufEndC);
+        }
+
+        public function insereEstoque($cepEndC, $ruaEndC, $numeroEndC, $bairroEndC, $cidadeEndC, $ufEndC) {
+            $insere = $this->pdo->prepare("insert into endereco(cepEndereco, numeroEndereco, tipoEndereco, ruaEndereco, cidadeEndereco, bairroEndereco, ufEndereco)
+            values (:cepEnd, :numeroEnd, :tipoEnd, :ruaEnd, :cidadeEnd, :bairroEnd, :ufEnd)");
+            $insere->bindValue(":cepEnd",$cepEndC);
+            $insere->bindValue(":numeroEnd",$numeroEndC);
+            $insere->bindValue(":ruaEnd",$ruaEndC);
+            $insere->bindValue(":bairroEnd",$bairroEndC);
+            $insere->bindValue(":cidadeEnd",$cidadeEndC);
+            $insere->bindValue(":ufEnd",$ufEndC);
         }
         
     }
