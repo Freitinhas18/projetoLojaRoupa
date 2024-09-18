@@ -21,6 +21,9 @@
                 exit();
             }
         }
+        public function insereCliente($cepEndC, $ruaEndC, $numeroEndC, $bairroEndC, $cidadeEndC, $ufEndC): void{
+
+        }
     }
 
 ?>
