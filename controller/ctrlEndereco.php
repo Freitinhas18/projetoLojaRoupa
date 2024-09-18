@@ -1,5 +1,5 @@
 <?php 
-    require_once'../model/classConexao.php';
+    require_once '../model/classConexao.php';
     include '../view/tableEndereco.html';
     
     $cepEndC = addslashes($_POST['cepEnd']);
