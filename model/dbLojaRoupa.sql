@@ -36,8 +36,8 @@ create table cliente(
     telCliente char(11) not null unique,
     emailCliente varchar(70) not null unique,
     numResidCliente varchar(10) not null,
-    complResidCliente varchar(70) not null,
-    obsResidCliente varchar(70) not null
+    complResidCliente varchar(70),
+    obsResidCliente varchar(70)
 );
 
 create table endereco(
