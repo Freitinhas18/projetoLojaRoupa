@@ -76,5 +76,21 @@
             $insere->bindValue(":sigla",$siglaTamanhoC);
             $insere->execute();
         }
+
+        public function insereVenda($dataVendaC, $nfVendaC) {
+            $insere = $this->pdo->prepare("insert into venda(nfVenda, dataVenda)
+            values (:nfVenda, :dataVenda)");
+            $insere->bindValue(":nfVenda",$nfVendaC);
+            $insere->bindValue(":dataVenda",$dataVendaC);
+            $insere->execute();
+        }
+
+        public function insereVitem($qtdVitemC, $precoVitemC) {
+            $insere = $this->pdo->prepare("insert into produto(qtdadevItem, precovItem)
+            values (:qtdItemVend, :precovItem)");
+            $insere->bindValue(":qtdItemVend",$qtdVitemC);
+            $insere->bindValue(":precovItem",$precoVitemC);
+            $insere->execute();
+        }
     }
 ?>

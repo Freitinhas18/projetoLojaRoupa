@@ -9,5 +9,5 @@
     $vendaC->insereVenda($nfVendaC, $dataVendaC);
 
     echo"<br><br>";
-    echo"<div> class='tableVenda'<h2>ENDEREÇO CADASTRADO</h2>.";
+    echo"<div> class='tableVenda'<h2>VENDA CADASTRADO</h2>.";
 ?>
