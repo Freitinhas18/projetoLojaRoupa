@@ -6,7 +6,7 @@
     $dataVendaC = addslashes($_POST['dataVenda']);
 
     $vendaC = new conexao();
-    $vendaC->inserecVendaC($nfVendaC, $dataVendaC);
+    $vendaC->insereVenda($nfVendaC, $dataVendaC);
 
     echo"<br><br>";
     echo"<div> class='tableVenda'<h2>ENDEREÇO CADASTRADO</h2>.";

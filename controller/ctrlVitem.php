@@ -8,7 +8,7 @@
     $precovItemC = addslashes($_POST['precovItem']);
 
     $VitemC = new conexao();
-    $VitemC->inserecVendaC($nfvItemC, $qtdItemVendC, $idEstoquevItemC, $precovItemC);
+    $VitemC->insereVenda($nfvItemC, $qtdItemVendC, $idEstoquevItemC, $precovItemC);
 
     echo"<br><br>";
     echo"<div> class='tableVitem'<h2>ENDEREÇO CADASTRADO</h2>.";

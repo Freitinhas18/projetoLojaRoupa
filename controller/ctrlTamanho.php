@@ -5,7 +5,7 @@
     $siglaTamanhoC = addslashes($_POST['sigla']);
 
     $TamanhoC = new conexao();
-    $TamanhoC->inserecTamanhoC($siglaTamanhoC);
+    $TamanhoC->insereTamanho($siglaTamanhoC);
 
     echo"<br><br>";
     echo"<div> class='tableTamanho'<h2>ENDEREÇO CADASTRADO</h2>.";

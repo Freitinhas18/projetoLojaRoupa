@@ -9,7 +9,7 @@
     $marcaProdutoC = addslashes($_POST['marcaProduto']);
 
     $produtoC = new conexao();
-    $produtoC->inserecProdutoC($corProdutoC, $nomeProdutoC, $modeloProdutoC, $tecidoProdutoC, $marcaProdutoC);
+    $produtoC->insereProduto($corProdutoC, $nomeProdutoC, $modeloProdutoC, $tecidoProdutoC, $marcaProdutoC);
 
     echo"<br><br>";
     echo"<div> class='tableProduto'<h2>ENDEREÇO CADASTRADO</h2>.";
