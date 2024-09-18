@@ -21,28 +21,27 @@
                 exit();
             }
         }
-        public function insereCliente($nomeClienteC, $cpfClienteC, $telClienteC, $emailClienteC, $numResidClienteC, $complResidClienteC, $obsResidClienteC){
+        public function insereCliente($nomeClienteC, $cpfClienteC, $telClienteC, $emailClienteC){
             $insere = $this->pdo->prepare("insert into cliente(nomeCliente, cpfCliente, telCliente, emailCliente, numResidCliente, complResidCliente, obsResidCliente)
             values (:nomeCliente, :cpfCliente, :telCliente, :emailCliente, :numResidCliente, :complResidCliente, :obsResidCliente)");
             $insere->bindValue(":nomeCliente",$nomeClienteC);
             $insere->bindValue(":cpfCliente",$cpfClienteC);
             $insere->bindValue(":telCliente",$telClienteC);
             $insere->bindValue(":emailCliente",$emailClienteC);
-            $insere->bindValue(":numResidCliente",$numResidClienteC);
-            $insere->bindValue(":complResidCliente",$complResidClienteC);
-            $insere->bindValue(":obsResidCliente",$obsResidClienteC);
             $insere->execute();
         }
 
-        public function insereEndereco($cepEndC, $ruaEndC, $numeroEndC, $bairroEndC, $cidadeEndC, $ufEndC) {
-            $insere = $this->pdo->prepare("insert into endereco(cepEndereco, numeroEndereco, tipoEndereco, ruaEndereco, cidadeEndereco, bairroEndereco, ufEndereco)
-            values (:cepEnd, :numeroEnd, :tipoEnd, :ruaEnd, :cidadeEnd, :bairroEnd, :ufEnd)");
+        public function insereEndereco($cepEndC, $ruaEndC, $numeroEndC, $bairroEndC, $cidadeEndC, $ufEndC, $complResidClienteC, $obsResidClienteC) {
+            $insere = $this->pdo->prepare("insert into endereco(cepEndereco, numeroEndereco, tipoEndereco, ruaEndereco, cidadeEndereco, bairroEndereco, ufEndereco, complResidCliente, obsResidCliente)
+            values (:cepEnd, :numeroEnd, :tipoEnd, :ruaEnd, :cidadeEnd, :bairroEnd, :ufEnd, :complResidCliente, :obsResidCliente)");
             $insere->bindValue(":cepEnd",$cepEndC);
             $insere->bindValue(":ruaEnd",$ruaEndC);
             $insere->bindValue(":numeroEnd",$numeroEndC);
             $insere->bindValue(":bairroEnd",$bairroEndC);
             $insere->bindValue(":cidadeEnd",$cidadeEndC);
             $insere->bindValue(":ufEnd",$ufEndC);
+            $insere->bindValue(":complResidCliente",$complResidClienteC);
+            $insere->bindValue(":obsResidCliente",$obsResidClienteC);
             $insere->execute();
         }
 
