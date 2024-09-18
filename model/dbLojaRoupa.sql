@@ -17,7 +17,7 @@ create table produto(
 create table estoque(
 	idEstoque int auto_increment not null primary key,
     loteEstoque int not null,
-    dataEstoque datetime not null,
+    dataEstoque date not null,
     qtdEstoque int not null,
     precoCusto decimal(8,2) not null,
     precoVenda decimal(8,2) not null,
@@ -93,6 +93,10 @@ foreign key(nfVenda) references venda(nfVenda);
 alter table vItem add idEstoque int not null unique;
 alter table vItem add constraint fkprodutovItem
 foreign key(idEstoque) references estoque(idEstoque);
+
+select * from cliente;
+select * from endereco;
+select * from estoque;
 
 -- ESTRUTURA CRUD
 -- C - CRIAR/INSERIR DADOS NA TABELA

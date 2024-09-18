@@ -32,8 +32,8 @@
         }
 
         public function insereEndereco($cepEndC, $ruaEndC, $numeroEndC, $bairroEndC, $cidadeEndC, $ufEndC, $complResidClienteC, $obsResidClienteC) {
-            $insere = $this->pdo->prepare("insert into endereco(cepEndereco, numeroEndereco, tipoEndereco, ruaEndereco, cidadeEndereco, bairroEndereco, ufEndereco, complResidCliente, obsResidCliente)
-            values (:cepEnd, :numeroEnd, :tipoEnd, :ruaEnd, :cidadeEnd, :bairroEnd, :ufEnd, :complResidCliente, :obsResidCliente)");
+            $insere = $this->pdo->prepare("insert into endereco(cepEndereco, numeroEndereco, ruaEndereco, cidadeEndereco, bairroEndereco, ufEndereco, complResidCliente, obsResidCliente)
+            values (:cepEnd, :numeroEnd, :ruaEnd, :cidadeEnd, :bairroEnd, :ufEnd, :complResidCliente, :obsResidCliente)");
             $insere->bindValue(":cepEnd",$cepEndC);
             $insere->bindValue(":ruaEnd",$ruaEndC);
             $insere->bindValue(":numeroEnd",$numeroEndC);
