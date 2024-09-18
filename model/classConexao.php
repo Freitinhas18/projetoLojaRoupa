@@ -43,6 +43,7 @@
             $insere->bindValue(":complResidCliente",$complResidClienteC);
             $insere->bindValue(":obsResidCliente",$obsResidClienteC);
             $insere->execute();
+            
         }
 
         public function insereEstoque($loteEstqC, $dataEstqC, $quantidadeEstqC, $precoCustoC, $precoVendaC) {
