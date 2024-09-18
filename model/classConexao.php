@@ -20,7 +20,6 @@
                 echo"ERRO não passou da conexão: ".$e->getMessage();
                 exit();
             }
-            return $this->pdo;
         }
     }
 
