@@ -47,14 +47,24 @@
 
         public function insereEstoque($loteEstqC, $dataEstqC, $quantidadeEstqC, $precoCustoC, $precoVendaC) {
             $insere = $this->pdo->prepare("insert into estoque(loteEstoque, dataEstoque, qtdEstoque, precoCusto, precoVenda)
-            values (:loteEstq, :dataEstq, :qtdEstq, :precoCustoEstq, :precoVendaEstq)");
+            values (:loteEstq, :dataEstq, :quantidadeEstq, :precoCustoEstq, :precoVendaEstq)");
             $insere->bindValue(":loteEstq",$loteEstqC);
             $insere->bindValue(":dataEstq",$dataEstqC);
-            $insere->bindValue(":qtdEstq",$quantidadeEstqC);
+            $insere->bindValue(":quantidadeEstq",$quantidadeEstqC);
             $insere->bindValue(":precoCustoEstq",$precoCustoC);
             $insere->bindValue(":precoVendaEstq",$precoVendaC);
+
+            $insere->execute();
+        }
+        public function insereProduto($corProdutoC, $nomeProdutoC, $modeloProdutoC, $tecidoProdutoC, $marcaProdutoC) {
+            $insere = $this->pdo->prepare("insert into produto(corProduto, nomeProduto, modeloProduto, tecidoProduto, marcaProduto)
+            values (:corProduto, :nomeProduto, :modeloProduto, :tecidoProduto, :marcaProduto)");
+            $insere->bindValue(":corProduto",$corProdutoC);
+            $insere->bindValue(":nomeProduto",$nomeProdutoC);
+            $insere->bindValue(":modeloProduto",$modeloProdutoC);
+            $insere->bindValue(":tecidoProduto",$tecidoProdutoC);
+            $insere->bindValue(":marcaProduto",$marcaProdutoC);
             $insere->execute();
         }
     }
-
 ?>
