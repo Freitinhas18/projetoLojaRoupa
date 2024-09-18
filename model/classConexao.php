@@ -21,7 +21,7 @@
                 exit();
             }
         }
-        
+
         public function insereCliente($nomeClienteC, $cpfClienteC, $telClienteC, $emailClienteC){
             $insere = $this->pdo->prepare("insert into cliente(nomeCliente, cpfCliente, telCliente, emailCliente)
             values (:nomeCliente, :cpfCliente, :telCliente, :emailCliente)");
@@ -70,14 +70,10 @@
             $insere->execute();
         }
 
-        public function insereProduto($corProdutoC, $nomeProdutoC, $modeloProdutoC, $tecidoProdutoC, $marcaProdutoC) {
-            $insere = $this->pdo->prepare("insert into produto(corProduto, nomeProduto, modeloProduto, tecidoProduto, marcaProduto)
-            values (:corProduto, :nomeProduto, :modeloProduto, :tecidoProduto, :marcaProduto)");
-            $insere->bindValue(":corProduto",$corProdutoC);
-            $insere->bindValue(":nomeProduto",$nomeProdutoC);
-            $insere->bindValue(":modeloProduto",$modeloProdutoC);
-            $insere->bindValue(":tecidoProduto",$tecidoProdutoC);
-            $insere->bindValue(":marcaProduto",$marcaProdutoC);
+        public function insereTamanho($siglaTamanhoC) {
+            $insere = $this->pdo->prepare("insert into tamanho(sigla)
+            values (:sigla)");
+            $insere->bindValue(":sigla",$siglaTamanhoC);
             $insere->execute();
         }
     }
