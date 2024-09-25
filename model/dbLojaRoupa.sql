@@ -47,7 +47,7 @@ create table endereco(
     ruaEndereco varchar(35) not null,
     cidadeEndereco varchar(29) not null,
     bairroEndereco varchar(35) not null,
-    ufEndereco varchar(20) not null,
+    ufEndereco varchar(20) not null
     -- numResidCliente varchar(10) not null,
 );
 
