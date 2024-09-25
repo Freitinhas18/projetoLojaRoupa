@@ -34,21 +34,21 @@ create table cliente(
 	nomeCliente varchar(100) not null,
     cpfCliente char(11) not null unique,
     telCliente char(11) not null unique,
-    emailCliente varchar(70) not null unique
+    emailCliente varchar(70) not null unique,
+    complResidCliente varchar(70),
+    obsResidCliente varchar(70),
+    numeroEndereco varchar(10) not null
 );
 
 create table endereco(
 	idEndereco int auto_increment not null primary key,
     cepEndereco char(8) not null,
-    numeroEndereco varchar(10) not null,
     -- tipoEndereco varchar(20) not null,
     ruaEndereco varchar(35) not null,
     cidadeEndereco varchar(29) not null,
     bairroEndereco varchar(35) not null,
     ufEndereco varchar(20) not null,
     -- numResidCliente varchar(10) not null,
-    complResidCliente varchar(70),
-    obsResidCliente varchar(70)
 );
 
 create table venda(
