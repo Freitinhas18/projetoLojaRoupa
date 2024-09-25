@@ -6,9 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/style.css" />
   <title>Consulta CEP</title>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="./js/jquery.js"></script>
 </head>
 
 <body>
@@ -16,42 +13,24 @@
     <h1>Endereço</h1>
     <form action="../controller/ctrlEndereco.php" method="post">
       <label for="cepEnd">CEP</label>
-      <input type="text" maxlength="9" name="cepEnd" id="cep" required/>
+      <input type="text" maxlength="9" name="cepEnd" id="cep" required />
       <br />
 
       <label for="ruaEnd">Rua</label>
-      <input type="text" name="ruaEnd" id="logradouro" required/>
-      <br />
-
-      <label for="numeroEnd">Número da casa</label>
-      <input type="number" name="numeroEnd" id="numero" required/>
+      <input type="text" name="ruaEnd" id="logradouro" required />
       <br />
 
       <label for="bairroEnd">Bairro</label>
-      <input type="text" name="bairroEnd" id="bairro" required/>
+      <input type="text" name="bairroEnd" id="bairro" required />
       <br />
 
       <label for="cidadeEnd">Cidade</label>
-      <input type="text" name="cidadeEnd" id="localidade" required/>
+      <input type="text" name="cidadeEnd" id="localidade" required />
       <br />
 
       <label for="ufEnd">UF</label>
-      <input type="text" name="ufEnd" id="uf" required/>
+      <input type="text" name="ufEnd" id="uf" required />
       <br />
-
-      <a>Deseja informar complemento?</a><br><br>
-      <label id="mostrarRadio">
-        <input type="radio" name="complemento" value="sim" id="csim" class="radio-button">Sim
-        <input type="radio" name="complemento" value="nao" id="cnao" class="radio-button">Não
-      </label>
-
-      <label id="complResidCliente" for="complResidCliente" style="display:none;"> Informe o complemento da
-        residência:</label>
-      <input type="text" name="complResidCliente" id="complResidCliente" maxlength="70" style="display:none;"><br>
-
-      <label id="obsResidCliente" for="obsResidCliente" style="display:none;"> Informe a observação da
-        residência:</label>
-      <input type="text" name="obsResidCliente" id="obsResidCliente" maxlength="70" style="display:none;">
 
       <button type="submit">Enviar</button>
     </form>
