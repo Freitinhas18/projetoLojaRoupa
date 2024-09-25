@@ -12,5 +12,5 @@
     $produtoC->insereProduto($corProdutoC, $nomeProdutoC, $modeloProdutoC, $tecidoProdutoC, $marcaProdutoC);
 
     echo"<br><br>";
-    echo"<div> class='tableProduto'<h2>PRODUTO CADASTRADO</h2>.";
+    echo"<div class='tableProduto'><h2>PRODUTO CADASTRADO</h2>.";
 ?>

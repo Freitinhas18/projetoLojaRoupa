@@ -8,5 +8,5 @@
     $TamanhoC->insereTamanho($siglaTamanhoC);
 
     echo"<br><br>";
-    echo"<div> class='tableTamanho'<h2>TAMANHO CADASTRADO</h2>.";
+    echo"<div class='tableTamanho'><h2>TAMANHO CADASTRADO</h2>.";
 ?>

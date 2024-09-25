@@ -13,5 +13,5 @@
     $enderecoC->insereEndereco($cepEndC, $ruaEndC, $bairroEndC, $cidadeEndC, $ufEndC);
 
     echo"<br><br>";
-    echo"<div class='tableEndereco'> <h2>ENDEREÇO CADASTRADO</h2>.";
+    echo"<div class='tableEndereco'><h2>ENDEREÇO CADASTRADO</h2>.";
 ?>

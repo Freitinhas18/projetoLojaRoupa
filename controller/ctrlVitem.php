@@ -9,5 +9,5 @@
     $VitemC->insereVenda($qtdVitemC, $precoVitemC);
 
     echo"<br><br>";
-    echo"<div> class='tableVitem'<h2>VENDA ITEM CADASTRADO</h2>.";
+    echo"<div class='tableVitem'><h2>VENDA ITEM CADASTRADO</h2>.";
 ?>

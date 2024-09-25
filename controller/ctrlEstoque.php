@@ -12,5 +12,5 @@
     $estoqueC->insereEstoque($loteEstqC, $dataEstqC, $quantidadeEstqC, $precoCustoC, $precoVendaC);
 
     echo"<br><br>";
-    echo"<div> class='tableEstoque'<h2>ESTOQUE CADASTRADO</h2>.";
+    echo"<div class='tableEstoque'><h2>ESTOQUE CADASTRADO</h2>.";
 ?>
