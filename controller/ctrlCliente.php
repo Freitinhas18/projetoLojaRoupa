@@ -14,5 +14,5 @@
     $clienteC->insereCliente($nomeClienteC, $cpfClienteC, $telClienteC, $emailClienteC, $numeroEndC, $complResidClienteC, $obsResidClienteC);
 
     echo"<br><br>";
-    echo"<div> class='tableCliente'<h2>CLIENTE CADASTRADO</h2>.";
+    echo"<div class='tableCliente'><h2>CLIENTE CADASTRADO</h2>.";
 ?>
