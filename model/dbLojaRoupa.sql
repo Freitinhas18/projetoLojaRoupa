@@ -42,7 +42,7 @@ create table cliente(
 
 create table endereco(
 	idEndereco int auto_increment not null primary key,
-    cepEndereco char(8) not null,
+    cepEndereco char(9) not null,
     -- tipoEndereco varchar(20) not null,
     ruaEndereco varchar(35) not null,
     cidadeEndereco varchar(29) not null,
