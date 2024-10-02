@@ -48,6 +48,25 @@ body {
     font-size: 16px;
   }
 
+.voltar{
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.voltar:hover{
+  background-color: #27ae60;
+}
+
+#voltar{
+  text-decoration: none;
+}
+
   button:hover {
     background-color: #27ae60;
   }
